@@ -17,6 +17,111 @@
                 <h1># Instalando programas no Linux pelo Terminal</h1>
             </div>
             <article class="caixa-texto">
+                <p>
+                    Essa instrução serve para as distros Linux baseadas no Debian (Ubuntu, Mint e derivados) e que usam a ferramenta <strong>apt</strong>.
+                </p>
+                <h2>
+                    Usando o apt
+                </h2>
+                <code class="caixa-codigo">
+                    $ sudo apt install &lt;nome_do_programa&gt;
+                </code>
+                <ul class="observacao">
+                    <li>
+                        <strong>$</strong> indica que você deve usar o <strong>usuário comum</strong> para fazer essa operação.
+                    </li>
+                    <li>
+                        <strong>sudo</strong> serve para pedir permissões de administrador temporariamente.
+                    </li>
+                    <li>
+                        <strong>apt</strong> do inglês, <em>Advanced Package Tool</em>, em português, Ferramenta de Empacotamento Avançada; é a ferramenta que nos ajuda na instalação, atualização e desinstalação de programas, entre outras funções.
+                    </li>
+                    <li>
+                        <strong>install</strong> é o comando de instalar, indicando ao apt o que fazer.
+                    </li>
+                    <li>
+                        digite o nome do programa sem os sinais <strong>&lt; e &gt;</strong>.
+                    </li>
+                </ul>
+                <p>
+                    Provavelmente, após esse comando o sistema irá pedir a <strong>senha</strong> que você configurou no início da instalação do sistema operacional.
+                </p>
+                <p>
+                    Exemplo:
+                </p>
+                <img class="exemplo" src="img/p0000-0.gif" alt="exemplo de instalação">
+                <p>
+                    Para fazer a instalação sem a pergunta de confirmação, basta acrescentar o <strong>-y</strong> ao final do comando.
+                </p>
+                <code class="caixa-codigo">
+                    $ sudo apt install &lt;nome_do_programa&gt; -y
+                </code>
+                <img class="exemplo" src="img/p0000-1.gif" alt="exemplo de instalação -y">
+                <h2>
+                    Instalando um pacote .deb
+                </h2>
+                <p>
+                    Caso você tenha um pacote <strong>.deb</strong> que deseja instalar, vá até a pasta onde está o arquivo
+                </p>
+                <p>
+                    Exemplo:
+                </p>
+                <img class="exemplo" src="img/p0000-2.gif" alt="comandos ls e cd">
+                <p>
+                    e digite no terminal
+                </p>
+                <code class="caixa-codigo">
+                    $ sudo apt install ./&lt;nome_do_pacote&gt;.deb
+                </code>
+                <p>
+                    Desse modo todas as dependências serão verificadas e instaladas.
+                </p>
+                <ul class="observacao">
+                    <li>
+                        O <strong>ponto-barra</strong> juntos serve para indicar o caminho do executável;
+                    </li>
+                    <li>
+                        o <strong>ponto</strong> significa diretório atual;
+                    </li>
+                    <li>
+                        a <strong>barra</strong> serve para separar o diretório do nome do arquivo.
+                    </li>
+                </ul>
+                <h2>
+                    Instalando um pacote .deb usando o dpkg
+                </h2>
+                <p>
+                    Vá até a pasta onde está o arquivo <strong>.deb</strong> e digite no terminal:
+                </p>
+                <code class="caixa-codigo">
+                    $ sudo dpkg -i &lt;nome_do_pacote&gt;.deb
+                </code>
+                <ul class="observacao">
+                    <li>
+                        <strong>dpkg</strong> do inglês, <em>Debian Package</em>, é uma ferramenta que gerencia pacotes .deb.
+                    </li>
+                    <li>
+                        <strong>i</strong> é o comando de instalar, indicando ao dpkg o que fazer.
+                    </li>
+                </ul>
+                <p>
+                    Exemplo:
+                </p>
+                <img class="exemplo" src="img/p0000-3.gif" alt="usando dpkg">
+                <p>
+                    Dessa maneira porém, as dependências não são instaladas, para corrigir isso, digite:
+                </p>
+                <code class="caixa-codigo">
+                    $ sudo apt install -f
+                </code>
+                <ul class="observacao">
+                    <li>
+                        <strong>-f</strong> do inglês, *fix*, para corrigir o que falta.
+                    </li>
+                </ul>
+                <p>
+                    Caso haja algo que precise de reparo, será mostrado na tela, pedindo a confirmação do usuário.
+                </p>
             </article>
             <nav>
                 <div class="nav-esquerda">
@@ -36,86 +141,3 @@
         </div>
     </body>
 </html>
-
-
-
-Essa instrução serve para as distros Linux baseadas no Debian (Ubuntu, Mint e derivados) e que usam a ferramenta **apt**.
-
-
-## Usando o apt
-
-```
-$ sudo apt install <nome_do_programa>
-```
-
-- **$** indica que você deve usar o **usuário comum** para fazer essa operação.
-
-- **sudo** serve para pedir permissões de administrador temporariamente.
-
-- **apt** do inglês, *Advanced Package Tool*, em português, Ferramenta de Empacotamento Avançada; é a ferramenta que nos ajuda na instalação, atualização e desinstalação de programas, entre outras funções.
-
-- **install** é o comando de instalar, indicando ao apt o que fazer.
-
-- digite o nome do programa sem os sinais **< >**.
-
-Provavelmente, após esse comando o sistema irá pedir a **senha** que você configurou no início da instalação do sistema operacional.
-
-![exemplo de instalação](img/p0000-0.gif)
-
-Para fazer a instalação sem a pergunta de confirmação, basta acrescentar o **-y** ao final do comando.
-
-```
-$ sudo apt install <nome_do_programa> -y
-```
-
-![exemplo de instalação -y](img/p0000-1.gif)
-
-
-## Instalando um pacote .deb
-
-Caso você tenha um pacote **.deb** que deseja instalar, vá até a pasta onde está o arquivo 
-
-![ls cd](img/p0000-2.gif)
-
-e digite no terminal
-
-```
-$ sudo apt install ./<nome_do_pacote>.deb
-```
-
-Desse modo todas as dependências serão verificadas e instaladas.
-
-- O **ponto-barra** juntos serve para indicar o caminho do executável;
-
-- o **ponto** significa diretório atual;
-
-- a **barra** serve para separar o diretório do nome do arquivo
-
-
-## Instalando um pacote .deb usando o dpkg
-
-Vá até a pasta onde está o arquivo **.deb** e digite no terminal:
-
-```
-$ sudo dpkg -i <nome_do_pacote>.deb
-```
-
-- **dpkg** do inglês, *Debian Package*, é uma ferramenta que gerencia pacotes .deb.
-
-- **i** é o comando de instalar, indicando ao dpkg o que fazer.
-
-Exemplo:
-
-![usando dpkg](img/p0000-3.gif)
-
-Dessa maneira porém, as dependências não são instaladas, para corrigir isso, digite:
-
-```
-$ sudo apt install -f
-```
-
-- **-f** do inglês, *fix*, para corrigir o que falta.
-
-Caso haja algo que precise de reparo, será mostrado na tela, pedindo a confirmação do usuário.
-
-tags: 

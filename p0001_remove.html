@@ -1,54 +1,109 @@
-# Terminal: Desinstalando programas
-
-Essa instrução serve para as distros Linux baseadas no Debian (Ubuntu, Mint e derivados) e que usam a ferramenta **apt**.
-
-
-## Usando o apt
-
-```
-$ sudo apt remove <nome_do_programa>
-```
-
-- **$** indica que você deve usar o **usuário comum** para fazer essa operação.
-
-- **sudo** serve para pedir permissões de administrador temporariamente.
-
-- **apt** do inglês, *Advanced Package Tool*, em português, Ferramenta de Empacotamento Avançada; é a ferramenta que nos ajuda na instalação, atualização e desinstalação de programas, entre outras funções.
-
-- **remove** é o comando para remover, indicando ao apt o que fazer.
-
-- digite o nome do programa sem os sinais **< >**.
-
-Provavelmente, após esse comando o sistema irá pedir a **senha** que você configurou no início da instalação do sistema operacional; além do pedido de confirmação da desinstalação.
-
-![remove](img/p0001-0.gif)
-
-Esse comando remove os pacotes, mas deixa os dados de configurações. Para removê-lo por completo, incluindo as configurações, utilize:
-
-```
-$ sudo apt purge <nome_do_programa>
-```
-
-![purge](img/p0001-1.gif)
-
-## Usando o dpkg
-
-Você também pode usar o **dpkg** para remover pacotes **.deb** que foram instalados. Assim,
-
-```
-$ sudo dpkg -r <nome_do_programa>
-```
-
-- **dpkg** do inglês, *Debian Package*, é uma ferramenta que gerencia pacotes .deb.
-
-- **r** é o comando de remover, indicando ao dpkg o que fazer.
-
-Para remover inclusive as configurações, digite:
-
-```
-$ sudo dpkg -P <nome_do_programa>
-```
-
-- **-P** do inglês, *purge*, para limpar.
-
-tags: linux, desinstalação, apt, terminal, dpkg, remove
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css">
+        <link rel="icon" href="img/penguin-icon.png">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+        <meta name="keywords" content="danielle8farias, tutorial, linux, desinstalação, apt, terminal, dpkg, remove">
+        <title># Terminal: Desinstalando programas</title>
+    </head>
+    <body>
+        <div class="corpo-central">
+            <div class="titulo">
+                <h1># Desinstalando programas no Linux pelo Terminal</h1>
+            </div>
+            <article class="caixa-texto">
+                <p>
+                    Essa instrução serve para as distros Linux baseadas no Debian (Ubuntu, Mint e derivados) e que usam a ferramenta <strong>apt</strong>.
+                </p>
+                <h2>
+                    Usando o apt
+                </h2>
+                <code class="caixa-codigo">
+                    $ sudo apt remove &lt;nome_do_programa&gt;
+                </code>
+                <ul class="observacao">
+                    <li>
+                        <strong>$</strong> indica que você deve usar o <strong>usuário comum</strong> para fazer essa operação.
+                    </li>
+                    <li>
+                        <strong>sudo</strong> serve para pedir permissões de administrador temporariamente.
+                    </li>
+                    <li>
+                        <strong>apt</strong> do inglês, <em>Advanced Package Tool</em>, em português, Ferramenta de Empacotamento Avançada; é a ferramenta que nos ajuda na instalação, atualização e desinstalação de programas, entre outras funções.
+                    </li>
+                    <li>
+                        <strong>remove</strong> é o comando para remover, indicando ao apt o que fazer.
+                    </li>
+                    <li>
+                        digite o nome do programa sem os sinais <strong>&lt; e &gt;</strong>.
+                    </li>
+                </ul>
+                <p>
+                    Provavelmente, após esse comando o sistema irá pedir a **senha** que você configurou no início da instalação do sistema operacional; além do pedido de confirmação da desinstalação.
+                </p>
+                <img class="exemplo" src="img/p0001-0.gif" alt="removendo programa">
+                <p>
+                    Esse comando remove os pacotes, mas deixa os dados de configurações. Para removê-lo por completo, incluindo as configurações, utilize:
+                </p>
+                <code class="caixa-codigo">
+                    $ sudo apt purge &lt;nome_do_programa&gt;
+                </code>
+                <img class="exemplo" src="img/p0001-1.gif" alt="usando o comando purge">
+                <h2>
+                    Usando o dpkg
+                </h2>
+                <p>
+                    Você também pode usar o <strong>dpkg</strong> para remover pacotes <strong>.deb</strong> que foram instalados. Assim,
+                </p>
+                <code class="caixa-codigo">
+                    $ sudo dpkg -r &lt;nome_do_programa&gt;
+                </code>
+                <ul class="observacao">
+                    <li>
+                        <strong>dpkg</strong> do inglês, *Debian Package*, é uma ferramenta que gerencia pacotes .deb
+                    </li>
+                    <li>
+                        <strong>r</strong> é o comando de remover, indicando ao dpkg o que fazer.
+                    </li>
+                </ul>
+                <p>
+                    Para remover inclusive as configurações, digite:
+                </p>
+                <code class="caixa-codigo">
+                    $ sudo dpkg -P &lt;nome_do_programa&gt;
+                </code>
+                <ul class="observacao">
+                    <li>
+                        <strong>P</strong> do inglês, <em>purge</em>, para limpar.
+                    </li>
+                </ul>
+            </article>
+            <nav>
+                <div class="nav-esquerda">
+                    <a href="p0000_install.html">
+                        &lt; anterior
+                    </a>
+                </div>
+                <div>
+                    <a href="index.html">
+                        voltar ao índice
+                    </a>
+                </div>
+                <div class="nav-direita">
+                    <a href="#">
+                        próximo &gt;
+                    </a>
+                </div>
+            </nav>
+            <footer>
+                    by danielle8farias
+            </footer>
+        </div>
+    </body>
+</html>

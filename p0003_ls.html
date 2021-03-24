@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css">
+        <link rel="icon" href="img/penguin-icon.png">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+        <meta name="keywords" content="danielle8farias, tutorial, linux, clear, terminal, limpar">
+        <title>Terminal: Listando arquivos e diretórios</title>
+    </head>
+    <body>
+        <div class="corpo-central">
+            <div class="titulo">
+                <h1># Listando arquivos e diretórios</h1>
+            </div>
+            <article class="caixa-texto">
+                <p>
+                    No terminal, digite:
+                </p>
+                <code class="caixa-codigo">
+                    $ ls
+                </code>
+                <ul class="observacao">
+                    <li>
+                        <strong>$</strong> indica que você deve usar o <strong>usuário comum</strong> para fazer essa operação.
+                    </li>
+                    <li>
+                        <strong>ls</strong> é o comando de listar os conteúdos de um diretório.
+                    </li>
+                </ul>
+                <p>
+                    Isso fará com que o terminal exiba o nome dos arquivos e diretórios no local em que o terminal está.
+                </p>
+                <img class="exemplo" src="img/p0003-0.gif" alt="usando o comando ls">
+                <h2>
+                    Listar arquivos e suas especificações
+                </h2>
+                <p>
+                    Ao digitar:
+                </p>
+                <code class="caixa-codigo">
+                    $ ls -l
+                </code>
+                <ul class="observacao">
+                    <li>
+                        <strong>l</strong> traz mais informações sobre os arquivos listados.
+                    </li>
+                </ul>
+                <p>
+                    O terminal mostrará arquivos e diretórios com as permissões, números de arquivos, proprietário dos arquivos, tamanho, data e hora modificada e nome dos arquivos.
+                </p>
+                <img class="exemplo" src="img/p0003-1.gif" alt="info arquivos">
+                <p>
+                    Ao digitar:
+                </p>
+                <code class="caixa-codigo">
+                    $ ls -lh
+                </code>
+                <ul class="observacao">
+                    <li>
+                        <strong>lh</strong> é a junção dos argumentos l e h.
+                    </li>
+                    <li>
+                        <strong>h</strong> do inglês, <em>human readable</em>, nos mostra os tamanhos em um formato mais legível para humanos, como KB, MB ou GB.
+                    </li>
+                </ul>
+                <p>
+                    O terminal exibirá os tamanhos dos arquivos de forma mais legível a humanos.
+                </p>
+                <img class="exemplo" src="img/p0003-2.gif" alt="arquivos em KB">
+                <h2>
+                    Listar também arquivos ocultos
+                </h2>
+                <p>
+                    Digitando:
+                </p>
+                <code class="caixa-codigo">
+                    $ ls -a
+                </code>
+                <ul class="observacao">
+                    <li>
+                        <strong>a</strong>, do inglês, <em>all</em>, inclui também os arquivos e diretórios ocultos.
+                    </li>
+                </ul>
+                <img class="exemplo" src="img/p0003-3.gif" alt="mostrando arquivos ocultos">
+                <p>
+                    Digitando:
+                </p>
+                <code class="caixa-codigo">
+                    $ ls -R
+                </code>
+                <ul class="observacao">
+                    <li>
+                        <strong>R</strong>, de recursivo.
+                    </li>
+                </ul>
+                <p>
+                    O terminal lista os arquivos, diretórios e subdiretórios, bem como os arquivos contidos nesses.
+                </p>
+                <img class="exemplo" src="img/p0003-4.gif" alt="mostrando diretórios e subdiretórios">
+                <h2>
+                    Listar arquivos de qualquer lugar
+                </h2>
+                <p>
+                    Para listar arquivos de um diretório o qual você não está, basta fornecer o caminho completo até o diretório desejado.
+                </p>
+                <p>
+                    Por exemplo:
+                </p>
+                <code class="caixa-codigo">
+                    $ ls /home/usuario/Música
+                </code>
+                <img class="exemplo" src="img/p0003-5.gif" alt="ls usado com o caminho absoluto">
+                <h2>
+                    Atalho para a home do usuário
+                </h2>
+                <p>
+                    Caso deseje listar os arquivos que estão dentro da home do usuário, pode se usar o sinal diacrítico til <strong>~</strong>.
+                </p>
+                <p>
+                    Exemplo:
+                </p>
+                <code class="caixa-codigo">
+                    $ ls ~/Música
+                </code>
+                <img class="exemplo" src="img/p0003-6.gif" alt="usando atalho para a home">
+                <h2>
+                    Listar conteúdos em mais de um diretório ao mesmo tempo
+                </h2>
+                <p>
+                    É possível listar o conteúdo em mais de um diretório ao mesmo tempo, basta indicá-los depois do ls com espaço entre eles.
+                </p>
+                <p>
+                    Exemplo: listando três diretórios ao mesmo tempo.
+                </p>
+                <code class="caixa-codigo">
+                    $ ls ~ /opt /tmp
+                </code>
+                <img class="exemplo" src="img/p0003-7.gif" alt="listando 3 diretórios ao mesmo tempo">
+            </article>
+        </div>
+    </body>
+</html>
+

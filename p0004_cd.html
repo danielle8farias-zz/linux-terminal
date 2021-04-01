@@ -1,163 +1,228 @@
-# Terminal: Navegando nos diretórios
-
-
-## Ver diretório atual
-
-Para saber em que diretório você se encontra, digite no terminal:
-
-```
-$ pwd
-```
-
-- **$** indica que você deve usar o **usuário comum** para fazer essa operação.
-
-- **pwd** do inglês, *print name of current/working directory*, imprime na tela o nome do diretório atual.
-
-![usando pwd](img/p0004-0.gif)
-
-A exibição de:
-
-```
-usuario@computador:~$
-```
-
-no terminal indica que você está no diretório /home/seu_nome_de_usuário. Perceba que depois dos dois pontos temos o **sinal diacrítico til**.
-
-## Mudando de diretório
-
-Para seguir até a pasta de downloads, basta digitar:
-
-```
-$ cd Downloads/
-```
-
-E no terminal será exibido:
-
-```
-usuario@computador:~/Downloads
-```
-
-- **cd** do inglês, *change directory*, serve para mudar de diretório/pasta.
-
-![mudando de diretório](img/p0004-1.gif)
-
-## Usando a tecla TAB para completar o nome do diretório
-
-Aqui vale a dica de iniciar a escrita do diretório desejado e utilizar a tecla **TAB** para a função de autocompletar.
-
-```
-$ cd Do [pressione a tecla 'tab' para completar]
-```
-
-Se houver mais de um diretório com as mesmas iniciais, será preciso apertar a tecla **TAB** duas vezes para que o terminal retorne o nome das pastas e você possa escolher qual precisa.
-
-```
-$ cd Do [pressionando o 'tab' duas vezes]
-Documentos/     /Downloads
-```
-
-![usando a tecla tab](img/p0004-2.gif)
-
-## Navegando para um determinado diretório de qualquer lugar
-
-Também é possível entrar no diretório citando o caminho completo. Exemplo:
-
-```
-$ cd /usr/games
-```
-
-![entrando no diretório games](img/p0004-3.gif)
-
-## Atalho para a home do usuário
-
-Caso deseje entrar em algum diretório que esteja na home do usuário, pode se usar o sinal diacrítico til **~**. Exemplo:
-
-```
-$ cd ~/Imagens
-```
-
-![entrando no diretório imagens](img/p0004-4.gif)
-
-## Retornar ao diretório acima
-
-Para retornar um diretório acima do atual, digite:
-
-```
-$ cd ..
-```
-
-![retornando ao diretório pai](img/p0004-5.gif)
-
-## Navegando para o diretório home do usuário de qualquer lugar
-
-Para retornar diretamente a pasta /home/seu_nome_de_usuário, não importa onde você esteja, digite:
-
-```
-$ cd
-```
-
-![indo direto para o diretório home](img/p0004-6.gif)
-
-## Retornar dois diretórios acima
-
-Para retornar duas pastas acima da atual, digite:
-
-```
-$ cd ../..
-```
-
-![entrando no diretório avô](img/p0004-7.gif)
-
-## Retornar ao diretório anterior
-
-Para retornar ao diretório anterior, no qual você estava
-
-```
-$ cd -
-```
-
-- **-**, sinal de menos. Esse operador é equivalente ao comando
-
-```
-$ cd $OLDPWD && pwd
-```
-
-que retorna o usuário ao diretório anterior e mostra o seu endereço na tela.
-
-Exemplo do uso do **cd -**:
-
-![voltando ao diretório](img/p0004-8.gif)
-
-## Diretório raiz
-
-A exibição de:
-
-```
-usuario@computador:/$
-```
-
-no terminal indica que você está no diretório raiz. Perceba que depois dos dois pontos **não temos** o sinal diacrítico til, mas temos a **barra**.
-
-Para seguir diretamente para o diretório raiz basta digitar:
-
-```
-$ cd /
-```
-
-![indo para o diretório raiz](img/p0004-9.gif)
-
-## Navegando por diretório com nomes compostos
-
-Para diretórios com nomes compostos, usa-se a **contrabarra (barra invertida)** ao final de cada palavra. Exemplo:
-
-```
-$ cd Área\ de\ Trabalho
-```
-
-Ou ainda, usa-se **aspas (duplas ou simples)**. Assim,
-
-```
-$ cd 'Área de Trabalho'
-```
-
-tags: linux, diretorio, cd, pastas
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css">
+        <link rel="icon" href="img/penguin-icon.png">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+        <meta name="keywords" content="danielle8farias, tutorial, linux, diretório, cd, pastas">
+        <title>Terminal: Navegando nos diretórios</title>
+    </head>
+    <body>
+        <div class="corpo-central">
+            <div class="titulo">
+                <h1># Navegando nos diretórios</h1>
+            </div>
+            <article class="caixa-texto">
+                <h2>
+                    Ver diretório atual
+                </h2>
+                <p>
+                    Para saber em que diretório você se encontra, digite no terminal:
+                </p>
+                <code class="caixa-codigo">
+                    $ pwd
+                </code>
+                <ul class="observacao">
+                    <li>
+                        <strong>$</strong> indica que você deve usar o <strong>usuário comum</strong> para fazer essa operação.
+                    </li>
+                    <li>
+                        <strong>pwd</strong> do inglês, <em>print name of current/working directory</em>, imprime na tela o nome do diretório atual.
+                    </li>
+                </ul>
+                <p>
+                    Exemplo:
+                </p>
+                <img class="exemplo" src="img/p0004-0.gif" alt="usando pwd">
+                <p>
+                    A exibição de:
+                </p>
+                <code class="caixa-codigo">
+                    usuario@computador:~$
+                </code>
+                <p>
+                    no terminal indica que você está no diretório /home/seu_nome_de_usuário. Perceba que depois dos dois pontos temos o sinal diacrítico <strong>til</strong>.
+                </p>
+                <h2>
+                    Mudando de diretório
+                </h2>
+                <p>
+                    Para seguir até a pasta de downloads, por exemplo, basta digitar:
+                </p>
+                <code class="caixa-codigo">
+                    $ cd Downloads/
+                </code>
+                <p>
+                    E no terminal será exibido:
+                </p>
+                <code class="caixa-codigo">
+                    usuario@computador:~/Downloads
+                </code>
+                <ul class="observacao">
+                    <li>
+                        <strong>cd</strong> do inglês, <em>change directory</em>, serve para mudar de diretório/pasta.
+                    </li>
+                </ul>
+                <img class="exemplo" src="img/p0004-1.gif" alt="mudando de diretório">
+                <h2>
+                    Usando a tecla TAB para completar o nome do diretório
+                </h2>
+                <p>
+                    Aqui vale a dica de iniciar a escrita do diretório desejado e utilizar a tecla <strong>TAB</strong> para a função de autocompletar.
+                </p>
+                <code class="caixa-codigo">
+                    $ cd Do [pressione a tecla 'tab' para completar]
+                </code>
+                <p>
+                    Se houver mais de um diretório com as mesmas iniciais, será preciso apertar a tecla <strong>TAB</strong> duas vezes para que o terminal retorne o nome das pastas e você possa escolher qual precisa.
+                </p>
+                <code class="caixa-codigo">
+                    $ cd Do [pressionando o 'tab' duas vezes]
+                </code>
+                <code class="caixa-codigo">
+                    Documentos/    /Downloads
+                </code>
+                <img class="exemplo" src="img/p0004-2.gif" alt="usando a tecla tab">
+                <h2>
+                    Navegando para um determinado diretório de qualquer lugar
+                </h2>
+                <p>
+                    Também é possível entrar no diretório citando o caminho completo. Exemplo:
+                </p>
+                <p>
+                    Entrando no diretório games.
+                </p>
+                <code class="caixa-codigo">
+                    $ cd /usr/games
+                </code>
+                <img class="exemplo" src="img/p0004-3.gif" alt="entrando no diretório games">
+                <h2>
+                    Atalho para a home do usuário
+                </h2>
+                <p>
+                    Caso deseje entrar em algum diretório que esteja na home do usuário, pode se usar o sinal diacrítico til <strong>~</strong>. Exemplo:
+                </p>
+                <p>
+                    Entrando no diretório imagens
+                </p>
+                <code class="caixa-codigo">
+                    $ cd ~/Imagens
+                </code>
+                <img class="exemplo" src="img/p0004-4.gif" alt="entrando no diretório imagens">
+                <h2>
+                    Retornar ao diretório acima
+                </h2>
+                <p>
+                    Para retornar um diretório acima do atual, digite:
+                </p>
+                <code class="caixa-codigo">
+                    $ cd ..
+                </code>
+                <img class="exemplo" src="img/p0004-5.gif" alt="retornando ao diretório pai">
+                <h2>
+                    Navegando para o diretório home do usuário de qualquer lugar
+                </h2>
+                <p>
+                    Para retornar diretamente a pasta /home/seu_nome_de_usuário, não importa onde você esteja, digite:
+                </p>
+                <code class="caixa-codigo">
+                    $ cd
+                </code>
+                <img class="exemplo" src="img/p0004-6.gif" alt="indo direto para o diretório home">
+                <h2>
+                    Retornar dois diretórios acima
+                </h2>
+                <p>
+                    Para retornar duas pastas acima da atual, digite:
+                </p>
+                <code class="caixa-codigo">
+                    $ cd ../..
+                </code>
+                <img class="exemplo" src="img/p0004-7.gif" alt="entrando no diretório avô">
+                <h2>
+                    Retornar ao diretório anterior
+                </h2>
+                <p>
+                    Para retornar ao diretório anterior, no qual você estava
+                </p>
+                <code class="caixa-codigo">
+                    $ cd -
+                </code>
+                <ul class="observacao">
+                    <li>
+                        <strong>-</strong>, sinal de menos. Esse operador é equivalente ao comando
+                    </li>
+                </ul>
+                <code class="caixa-codigo">
+                    $ cd $OLDPWD && pwd
+                </code>
+                <p>
+                    que retorna o usuário ao diretório anterior e mostra o seu endereço na tela.
+                </p>
+                <p>
+                    Exemplo:
+                </p>
+                <img class="exemplo" src="img/p0004-8.gif" alt="voltando ao diretório">
+                <h2>
+                    Diretório raiz
+                </h2>
+                <p>
+                    A exibição de:
+                </p>
+                <code class="caixa-codigo">
+                    usuario@computador:/$
+                </code>
+                <p>
+                    no terminal indica que você está no diretório raiz. Perceba que depois dos dois pontos <strong>não temos</strong> o sinal diacrítico til, mas temos a <strong>barra</strong>.
+                </p>
+                <p>
+                    Para seguir diretamente para o diretório raiz basta digitar:
+                </p>
+                <code class="caixa-codigo">
+                    $ cd /
+                </code>
+                <img class="exemplo" src="img/p0004-9.gif" alt="indo para o diretório raiz">
+                <h2>
+                    Navegando por diretório com nomes compostos
+                </h2>
+                <p>
+                    Para diretórios com nomes compostos, usa-se a <strong>contrabarra (barra invertida)</strong> ao final de cada palavra. Exemplo:
+                </p>
+                <code class="caixa-codigo">
+                    $ cd Área\ de\ Trabalho
+                </code>
+                <p>
+                    Ou ainda, usa-se <strong>aspas (duplas ou simples)</strong>. Assim,
+                </p>
+                <code class="caixa-codigo">
+                    $ cd 'Área de Trabalho'
+                </code>
+            </article>
+            <nav>
+                <div class="nav-esquerda">
+                    <a href="p0003_ls.html">
+                        &lt; anterior
+                    </a>
+                </div>
+                <div>
+                    <a href="index.html">
+                        voltar ao índice
+                    </a>
+                </div>
+                <div class="nav-direita">
+                    <a href="#">
+                        próximo &gt;
+                    </a>
+                </div>
+            </nav>
+            <footer>
+                    by danielle8farias
+            </footer>
+        </div>
+    </body>
+</html>

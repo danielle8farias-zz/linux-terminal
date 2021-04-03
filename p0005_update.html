@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css">
+        <link rel="icon" href="img/penguin-icon.png">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+        <meta name="keywords" content="danielle8farias, tutorial, linux, terminal, update, upgrade">
+        <title>Terminal: Atualizando o sistema</title>
+    </head>
+    <body>
+        <div class="corpo-central">
+            <div class="titulo">
+                <h1># Atualizando o sistema</h1>
+            </div>
+            <article class="caixa-texto">
+                <p>
+                    Essa instrução serve para as distros Linux baseadas no Debian (Ubuntu, Mint e derivados).
+                </p>
+                <h2>
+                    Baixando a lista de repositórios
+                </h2>
+                <p>
+                    Para atualizar os pacotes do seu sistema, digite no terminal:
+                </p>
+                <code class="caixa-codigo">
+                    $ sudo apt update
+                </code>
+                <ul class="observacao">
+                    <li>
+                        <strong>$</strong> indica que você deve usar o <strong>usuário comum</strong> para fazer essa operação.
+                    </li>
+                    <li>
+                        <strong>sudo</strong> serve para pedir permissões de administrador temporariamente.
+                    </li>
+                    <li>
+                        <strong>apt</strong> do inglês, <em>Advanced Package Tool</em>, em português, Ferramenta de Empacotamento Avançada; é a ferramenta que nos ajuda na instalação, atualização e desinstalação de programas, entre outras funções.
+                    </li>
+                    <li>
+                        <strong>update</strong> serve para atualizar a lista dos <strong>repositórios</strong>.
+                    </li>
+                    <li>
+                        Os <strong>repositórios</strong> são servidores que hospedam os pacotes de software de cada distribuição Linux.
+                    </li>
+                </ul>
+                <p>
+                    Serão mostradas na tela as atualizações existentes.
+                </p>
+                <p>
+                    Exemplo:
+                </p>
+                <img class="exemplo" src="img/p0005-0.gif" alt="atualizando repositórios">
+                <h2>
+                    Instalando as atualizações
+                </h2>
+                <p>
+                    Para fazer a instalação dessas atualizações,
+                </p>
+                <code class="caixa-codigo">
+                    $ sudo apt upgrade
+                </code>
+                <ul class="observacao">
+                    <li>
+                        <strong>upgrade</strong> é o comando que irá fazer a instalação das atualizações em si.
+                    </li>
+                </ul>
+            </article>
+            <nav>
+                <div class="nav-esquerda">
+                    <a href="p0004_cd.html">
+                        &lt; anterior
+                    </a>
+                </div>
+                <div>
+                    <a href="index.html">
+                        voltar ao índice
+                    </a>
+                </div>
+                <div class="nav-direita">
+                    <a href="#">
+                        próximo &gt;
+                    </a>
+                </div>
+            </nav>
+            <footer>
+                    by danielle8farias
+            </footer>
+        </div>
+    </body>
+</html>

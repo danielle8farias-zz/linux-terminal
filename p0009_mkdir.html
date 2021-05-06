@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css">
+        <link rel="icon" href="img/penguin-icon.png">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+        <meta name="keywords" content="danielle8farias, tutorial, linux, terminal, mkdir">
+        <title>Terminal: Criando diretório</title>
+    </head>
+    <body>
+        <div class="corpo-central">
+            <div class="titulo">
+                <h1># Criando diretório</h1>
+            </div>
+            <article class="caixa-texto">
+                <p>
+                    No terminal digite:
+                </p>
+                <code class="caixa-codigo">
+                    $ mkdir &lt;nome_do_diretório&gt;
+                </code>
+                <ul class="observacao">
+                    <li>
+                        <strong>$</strong> indica que você deve usar o <strong>usuário comum</strong> para fazer essa operação.
+                    </li>
+                    <li>
+                        <strong>mkdir</strong> do inglês, <em>make directory</em>, é o comando que vai criar o nosso novo diretório/pasta.
+                    </li>
+                    <li>
+                        digite o nome do diretório sem os sinais <strong>&lt; e &gt;</strong>.
+                    </li>
+                </ul>
+                <img class="exemplo" src="img/p0009-0.gif" alt="criando diretório">
+                <p>
+                    Para ver um retorno da tela de que o diretório foi criado com sucesso, basta usar o argumento <strong>-v</strong>, assim
+                </p>
+                <code class="caixa-codigo">
+                    $ mkdir -v &lt;nome_do_diretório&gt;
+                </code>
+                <ul class="observacao">
+                    <li>
+                        <strong>v</strong>, de <em>verbose</em>, retorna na tela o que o sistema fez ou está fazendo.
+                    </li>
+                </ul>
+                <img class="exemplo" src="img/p0009-1.gif" alt="criando diretório com retorno na tela">
+                <h2>
+                    Criando vários diretórios ao mesmo tempo
+                </h2>
+                <p>
+                    Para criar mais de um diretório ao mesmo tempo, basta usar o comando mkdir, com o nome dos diretórios e um espaço entre eles.
+                </p>
+                <p>
+                    Exemplo:
+                </p>
+                <code class="caixa-codigo">
+                    $ mkdir js css img
+                </code>
+                <p>
+                    Acima, criamos três diretórios simultaneamente.
+                </p>
+                <img class="exemplo" src="img/p0009-2.gif" alt="criando 3 diretórios">
+                <h2>
+                    Criando um subdiretório
+                </h2>
+                <p>
+                    Para criar um subdiretório, em um diretório já existente, digite:
+                </p>
+                <code class="caixa-codigo">
+                    $ mkdir &lt;diretório_que_já_existe&gt;/&lt;novo_diretório&gt;
+                </code>
+                <img class="exemplo" src="img/p0009-3.gif" alt="criando subdiretório">
+                <h2>
+                    Criando um diretório e um subdiretório
+                </h2>
+                <p>
+                    Para criar um diretório e um subdiretório ao mesmo tempo, digite:
+                </p>
+                <code class="caixa-codigo">
+                    $ mkdir -p &lt;diretório&gt;/&lt;subdiretório&gt;
+                </code>
+                <ul class="observacao">
+                    <li>
+                        <strong>p</strong> do inglês, <em>parents</em>, se o diretório pai não existir, ele será criado. É o que permite a criação dos dois juntos; o diretório filho e o diretório pai.
+                    </li>
+                </ul>
+                <img class="exemplo" src="img/p0009-4.gif" alt="criando diretório e subdiretório">
+            </article>
+            <nav>
+                <div class="nav-esquerda">
+                    <a href="p0008_pacotes_quebrados.html">
+                        &lt; anterior
+                    </a>
+                </div>
+                <div>
+                    <a href="index.html">
+                        voltar ao índice
+                    </a>
+                </div>
+                <div class="nav-direita">
+                    <a href="#">
+                        próximo &gt;
+                    </a>
+                </div>
+            </nav>
+            <footer>
+                    by danielle8farias
+            </footer>
+        </div>
+    </body>
+</html>
